@@ -4,8 +4,7 @@
 	"description": "learn about javascript development, and the sun",
 	"main": "src/server/index.js",
 	"scripts": {
-		"start": "rimraf lib dist && babel src -d lib && webpack && node lib/server",
-    "prepublish": "echo 'hey!' > prepublish.md"
+		"start": "rimraf lib dist && babel src -d lib && webpack && node lib/server"
 	},
 	"dependencies": {
 		"express": "^4.15.2",

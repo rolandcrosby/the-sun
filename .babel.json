@@ -548,6 +548,6 @@
         "import path from 'path';\n\nexport default {\n  entry: [\n    './src/client',\n  ],\n  output: {\n    filename: 'js/bundle.js',\n    path: path.resolve(__dirname, 'dist'),\n    publicPath: '/static/',\n  },\n  module: {\n    rules: [\n      { test: /\\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },\n    ],\n  },\n  resolve: {\n    extensions: ['.js', '.jsx'],\n  },\n}\n"
       ]
     },
-    "mtime": 1490890481182
+    "mtime": 1490891626474
   }
 }
