@@ -2,4 +2,4 @@
 /dist/
 .v8flags*.json
 .babel.json
-
+/node_modules/
