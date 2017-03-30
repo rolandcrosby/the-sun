@@ -6,22 +6,33 @@ import calculator from '../shared/calculator';
 //console.log(APP_CONTAINER_SELECTOR);
 
 $(function() {
-  console.log('hello world :o');
+  function getHtml(state) {
+    if (state.hasOwnProperty("location") && state.location !== null) {
+      const pos = calculator.position(state.location.coords.latitude, state.location.coords.longitude)
+      return `<p><strong>Position:</strong> (${state.location.coords.latitude}, ${state.location.coords.longitude})<br>
+<strong>Azimuth:</strong> ${calculator.degreesFromNorth(pos.azimuth)}°<br>
+<strong>Elevation:</strong> ${calculator.degrees(pos.altitude)}°</p>`;
+    } else {
+      return `<p><i>Looking for position...</i></p>`
+    }
+  }
+  
+  var state = {};
+  document.querySelector(APP_CONTAINER_SELECTOR).innerHTML = getHtml(state);
   if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition( (position) => { 
-      console.log("Found your location \nLat : "+position.coords.latitude+" \nLang :"+ position.coords.longitude);
-      const pos = calculator.position(position.coords.latitude, position.coords.longitude);
-      console.log(`Azimuth: ${calculator.degreesFromNorth(pos.azimuth)}°`);
-      console.log(`Elevation: ${calculator.degrees(pos.altitude)}°`);
-      console.log(pos);
-      // $.post(
-      //   '/position',
-      //   JSON.stringify(
-      //     {lat: position.coords.latitude,
-      //      lng: position.coords.longitude}
-      //   ), (e) => {
-      //     console.log(e)
-      //   });
+    navigator.geolocation.getCurrentPosition( (position) => {
+      state.location = position;
+      document.querySelector(APP_CONTAINER_SELECTOR).innerHTML = getHtml(state);
     });
   }
 });
+
+
+// $.post(
+//   '/position',
+//   JSON.stringify(
+//     {lat: position.coords.latitude,
+//      lng: position.coords.longitude}
+//   ), (e) => {
+//     console.log(e)
+//   });
