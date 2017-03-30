@@ -1,0 +1,36 @@
+{
+	"name": "the-sun",
+	"version": "0.0.1",
+	"description": "learn about javascript development, and the sun",
+	"main": "src/server/index.js",
+	"scripts": {
+		"start": "rimraf lib dist && babel src -d lib && webpack && node lib/server",
+    "prepublish": "echo 'hey!' > prepublish.md"
+	},
+	"dependencies": {
+		"express": "^4.15.2",
+		"suncalc": "^1.8.0",
+		"babel-core": "^6.24.0",
+		"babel-cli": "^6.24.0",
+		"babel-preset-latest": "^6.24.0",
+		"babel-preset-env": "^1.2.2",
+		"body-parser": "^1.17.1",
+		"babel-loader": "^6.4.1",
+		"webpack": "^2.3.2",
+		"rimraf": "^2.6.1",
+		"jquery": "^3.2.1"
+	},
+	"devDependencies": {},
+	"engines": {
+		"node": "6.9.x"
+	},
+	"repository": {
+		"url": "https://glitch.com/#!/project/welcome-project"
+	},
+	"license": "MIT",
+	"keywords": [
+		"node",
+		"glitch",
+		"express"
+	]
+}

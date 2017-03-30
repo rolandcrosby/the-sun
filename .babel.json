@@ -1,0 +1,553 @@
+{
+  "{\"filename\":\"/app/src/server/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/src/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/src/server/index.js",
+      "filenameRelative": "/app/src/server/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/src/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/src/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "// server.js\n// where your node app starts\n\n// init project\nvar express = require('express');\nvar app = express();\n\n// http://expressjs.com/en/starter/static-files.html\napp.use(express.static('public'));\n\n// http://expressjs.com/en/starter/basic-routing.html\napp.get(\"/\", function (request, response) {\n  response.sendFile(__dirname + '/views/index.html');\n});\n\nvar listener = app.listen(process.env.PORT, function () {\n  console.log('Your app is listening on port ' + listener.address().port);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImV4cHJlc3MiLCJyZXF1aXJlIiwiYXBwIiwidXNlIiwic3RhdGljIiwiZ2V0IiwicmVxdWVzdCIsInJlc3BvbnNlIiwic2VuZEZpbGUiLCJfX2Rpcm5hbWUiLCJsaXN0ZW5lciIsImxpc3RlbiIsInByb2Nlc3MiLCJlbnYiLCJQT1JUIiwiY29uc29sZSIsImxvZyIsImFkZHJlc3MiLCJwb3J0Il0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBOztBQUVBO0FBQ0EsSUFBSUEsVUFBVUMsUUFBUSxTQUFSLENBQWQ7QUFDQSxJQUFJQyxNQUFNRixTQUFWOztBQUVBO0FBQ0FFLElBQUlDLEdBQUosQ0FBUUgsUUFBUUksTUFBUixDQUFlLFFBQWYsQ0FBUjs7QUFFQTtBQUNBRixJQUFJRyxHQUFKLENBQVEsR0FBUixFQUFhLFVBQVVDLE9BQVYsRUFBbUJDLFFBQW5CLEVBQTZCO0FBQ3hDQSxXQUFTQyxRQUFULENBQWtCQyxZQUFZLG1CQUE5QjtBQUNELENBRkQ7O0FBSUEsSUFBSUMsV0FBV1IsSUFBSVMsTUFBSixDQUFXQyxRQUFRQyxHQUFSLENBQVlDLElBQXZCLEVBQTZCLFlBQVk7QUFDdERDLFVBQVFDLEdBQVIsQ0FBWSxtQ0FBbUNOLFNBQVNPLE9BQVQsR0FBbUJDLElBQWxFO0FBQ0QsQ0FGYyxDQUFmIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlUm9vdCI6Ii9hcHAvc3JjL3NlcnZlciIsInNvdXJjZXNDb250ZW50IjpbIi8vIHNlcnZlci5qc1xuLy8gd2hlcmUgeW91ciBub2RlIGFwcCBzdGFydHNcblxuLy8gaW5pdCBwcm9qZWN0XG52YXIgZXhwcmVzcyA9IHJlcXVpcmUoJ2V4cHJlc3MnKTtcbnZhciBhcHAgPSBleHByZXNzKCk7XG5cbi8vIGh0dHA6Ly9leHByZXNzanMuY29tL2VuL3N0YXJ0ZXIvc3RhdGljLWZpbGVzLmh0bWxcbmFwcC51c2UoZXhwcmVzcy5zdGF0aWMoJ3B1YmxpYycpKTtcblxuLy8gaHR0cDovL2V4cHJlc3Nqcy5jb20vZW4vc3RhcnRlci9iYXNpYy1yb3V0aW5nLmh0bWxcbmFwcC5nZXQoXCIvXCIsIGZ1bmN0aW9uIChyZXF1ZXN0LCByZXNwb25zZSkge1xuICByZXNwb25zZS5zZW5kRmlsZShfX2Rpcm5hbWUgKyAnL3ZpZXdzL2luZGV4Lmh0bWwnKTtcbn0pO1xuXG52YXIgbGlzdGVuZXIgPSBhcHAubGlzdGVuKHByb2Nlc3MuZW52LlBPUlQsIGZ1bmN0aW9uICgpIHtcbiAgY29uc29sZS5sb2coJ1lvdXIgYXBwIGlzIGxpc3RlbmluZyBvbiBwb3J0ICcgKyBsaXN0ZW5lci5hZGRyZXNzKCkucG9ydCk7XG59KTtcbiJdfQ==",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "express",
+        "require",
+        "app",
+        "use",
+        "static",
+        "get",
+        "request",
+        "response",
+        "sendFile",
+        "__dirname",
+        "listener",
+        "listen",
+        "process",
+        "env",
+        "PORT",
+        "console",
+        "log",
+        "address",
+        "port"
+      ],
+      "mappings": "AAAA;AACA;;AAEA;AACA,IAAIA,UAAUC,QAAQ,SAAR,CAAd;AACA,IAAIC,MAAMF,SAAV;;AAEA;AACAE,IAAIC,GAAJ,CAAQH,QAAQI,MAAR,CAAe,QAAf,CAAR;;AAEA;AACAF,IAAIG,GAAJ,CAAQ,GAAR,EAAa,UAAUC,OAAV,EAAmBC,QAAnB,EAA6B;AACxCA,WAASC,QAAT,CAAkBC,YAAY,mBAA9B;AACD,CAFD;;AAIA,IAAIC,WAAWR,IAAIS,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,YAAY;AACtDC,UAAQC,GAAR,CAAY,mCAAmCN,SAASO,OAAT,GAAmBC,IAAlE;AACD,CAFc,CAAf",
+      "file": "index.js",
+      "sourceRoot": "/app/src/server",
+      "sourcesContent": [
+        "// server.js\n// where your node app starts\n\n// init project\nvar express = require('express');\nvar app = express();\n\n// http://expressjs.com/en/starter/static-files.html\napp.use(express.static('public'));\n\n// http://expressjs.com/en/starter/basic-routing.html\napp.get(\"/\", function (request, response) {\n  response.sendFile(__dirname + '/views/index.html');\n});\n\nvar listener = app.listen(process.env.PORT, function () {\n  console.log('Your app is listening on port ' + listener.address().port);\n});\n"
+      ]
+    },
+    "mtime": 1490838554449
+  },
+  "{\"filename\":\"/app/src/server/index.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/src/server\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/src/server/index.js",
+      "filenameRelative": "/app/src/server/index.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "index.js",
+      "sourceFileName": "index.js",
+      "sourceRoot": "/app/src/server",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/src/server",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "index"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\n// http://expressjs.com/en/starter/static-files.html\napp.use(_express2.default.static('public'));\n\n// http://expressjs.com/en/starter/basic-routing.html\napp.get(\"/\", function (request, response) {\n  response.sendFile(__dirname + '/views/index.html');\n});\n\nvar listener = app.listen(process.env.PORT, function () {\n  console.log('Your app is listening on port ' + listener.address().port);\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LmpzIl0sIm5hbWVzIjpbImFwcCIsInVzZSIsInN0YXRpYyIsImdldCIsInJlcXVlc3QiLCJyZXNwb25zZSIsInNlbmRGaWxlIiwiX19kaXJuYW1lIiwibGlzdGVuZXIiLCJsaXN0ZW4iLCJwcm9jZXNzIiwiZW52IiwiUE9SVCIsImNvbnNvbGUiLCJsb2ciLCJhZGRyZXNzIiwicG9ydCJdLCJtYXBwaW5ncyI6Ijs7QUFBQTs7Ozs7O0FBRUEsSUFBSUEsTUFBTSx3QkFBVjs7QUFFQTtBQUNBQSxJQUFJQyxHQUFKLENBQVEsa0JBQVFDLE1BQVIsQ0FBZSxRQUFmLENBQVI7O0FBRUE7QUFDQUYsSUFBSUcsR0FBSixDQUFRLEdBQVIsRUFBYSxVQUFVQyxPQUFWLEVBQW1CQyxRQUFuQixFQUE2QjtBQUN4Q0EsV0FBU0MsUUFBVCxDQUFrQkMsWUFBWSxtQkFBOUI7QUFDRCxDQUZEOztBQUlBLElBQUlDLFdBQVdSLElBQUlTLE1BQUosQ0FBV0MsUUFBUUMsR0FBUixDQUFZQyxJQUF2QixFQUE2QixZQUFZO0FBQ3REQyxVQUFRQyxHQUFSLENBQVksbUNBQW1DTixTQUFTTyxPQUFULEdBQW1CQyxJQUFsRTtBQUNELENBRmMsQ0FBZiIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZVJvb3QiOiIvYXBwL3NyYy9zZXJ2ZXIiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJztcblxudmFyIGFwcCA9IGV4cHJlc3MoKTtcblxuLy8gaHR0cDovL2V4cHJlc3Nqcy5jb20vZW4vc3RhcnRlci9zdGF0aWMtZmlsZXMuaHRtbFxuYXBwLnVzZShleHByZXNzLnN0YXRpYygncHVibGljJykpO1xuXG4vLyBodHRwOi8vZXhwcmVzc2pzLmNvbS9lbi9zdGFydGVyL2Jhc2ljLXJvdXRpbmcuaHRtbFxuYXBwLmdldChcIi9cIiwgZnVuY3Rpb24gKHJlcXVlc3QsIHJlc3BvbnNlKSB7XG4gIHJlc3BvbnNlLnNlbmRGaWxlKF9fZGlybmFtZSArICcvdmlld3MvaW5kZXguaHRtbCcpO1xufSk7XG5cbnZhciBsaXN0ZW5lciA9IGFwcC5saXN0ZW4ocHJvY2Vzcy5lbnYuUE9SVCwgZnVuY3Rpb24gKCkge1xuICBjb25zb2xlLmxvZygnWW91ciBhcHAgaXMgbGlzdGVuaW5nIG9uIHBvcnQgJyArIGxpc3RlbmVyLmFkZHJlc3MoKS5wb3J0KTtcbn0pO1xuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "index.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "get",
+        "request",
+        "response",
+        "sendFile",
+        "__dirname",
+        "listener",
+        "listen",
+        "process",
+        "env",
+        "PORT",
+        "console",
+        "log",
+        "address",
+        "port"
+      ],
+      "mappings": ";;AAAA;;;;;;AAEA,IAAIA,MAAM,wBAAV;;AAEA;AACAA,IAAIC,GAAJ,CAAQ,kBAAQC,MAAR,CAAe,QAAf,CAAR;;AAEA;AACAF,IAAIG,GAAJ,CAAQ,GAAR,EAAa,UAAUC,OAAV,EAAmBC,QAAnB,EAA6B;AACxCA,WAASC,QAAT,CAAkBC,YAAY,mBAA9B;AACD,CAFD;;AAIA,IAAIC,WAAWR,IAAIS,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB,EAA6B,YAAY;AACtDC,UAAQC,GAAR,CAAY,mCAAmCN,SAASO,OAAT,GAAmBC,IAAlE;AACD,CAFc,CAAf",
+      "file": "index.js",
+      "sourceRoot": "/app/src/server",
+      "sourcesContent": [
+        "import express from 'express';\n\nvar app = express();\n\n// http://expressjs.com/en/starter/static-files.html\napp.use(express.static('public'));\n\n// http://expressjs.com/en/starter/basic-routing.html\napp.get(\"/\", function (request, response) {\n  response.sendFile(__dirname + '/views/index.html');\n});\n\nvar listener = app.listen(process.env.PORT, function () {\n  console.log('Your app is listening on port ' + listener.address().port);\n});\n"
+      ]
+    },
+    "mtime": 1490839531861
+  },
+  "{\"filename\":\"/app/webpack.config.babel.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],{\"loose\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.24.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/webpack.config.babel.js",
+      "filenameRelative": "/app/webpack.config.babel.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "webpack.config.babel.js",
+      "sourceFileName": "webpack.config.babel.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "webpack.config.babel"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = {\n  entry: ['./src/client'],\n  output: {\n    filename: 'js/bundle.js',\n    path: _path2.default.resolve(__dirname, 'dist'),\n    publicPath: '/static/'\n  },\n  module: {\n    rules: [{ test: /\\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ }]\n  },\n  resolve: {\n    extensions: ['.js', '.jsx']\n  }\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2suY29uZmlnLmJhYmVsLmpzIl0sIm5hbWVzIjpbImVudHJ5Iiwib3V0cHV0IiwiZmlsZW5hbWUiLCJwYXRoIiwicmVzb2x2ZSIsIl9fZGlybmFtZSIsInB1YmxpY1BhdGgiLCJtb2R1bGUiLCJydWxlcyIsInRlc3QiLCJ1c2UiLCJleGNsdWRlIiwiZXh0ZW5zaW9ucyJdLCJtYXBwaW5ncyI6Ijs7Ozs7O0FBQUE7Ozs7OztrQkFFZTtBQUNiQSxTQUFPLENBQ0wsY0FESyxDQURNO0FBSWJDLFVBQVE7QUFDTkMsY0FBVSxjQURKO0FBRU5DLFVBQU0sZUFBS0MsT0FBTCxDQUFhQyxTQUFiLEVBQXdCLE1BQXhCLENBRkE7QUFHTkMsZ0JBQVk7QUFITixHQUpLO0FBU2JDLFVBQVE7QUFDTkMsV0FBTyxDQUNMLEVBQUVDLE1BQU0sYUFBUixFQUF1QkMsS0FBSyxjQUE1QixFQUE0Q0MsU0FBUyxjQUFyRCxFQURLO0FBREQsR0FUSztBQWNiUCxXQUFTO0FBQ1BRLGdCQUFZLENBQUMsS0FBRCxFQUFRLE1BQVI7QUFETDtBQWRJLEMiLCJmaWxlIjoid2VicGFjay5jb25maWcuYmFiZWwuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBwYXRoIGZyb20gJ3BhdGgnO1xuXG5leHBvcnQgZGVmYXVsdCB7XG4gIGVudHJ5OiBbXG4gICAgJy4vc3JjL2NsaWVudCcsXG4gIF0sXG4gIG91dHB1dDoge1xuICAgIGZpbGVuYW1lOiAnanMvYnVuZGxlLmpzJyxcbiAgICBwYXRoOiBwYXRoLnJlc29sdmUoX19kaXJuYW1lLCAnZGlzdCcpLFxuICAgIHB1YmxpY1BhdGg6ICcvc3RhdGljLycsXG4gIH0sXG4gIG1vZHVsZToge1xuICAgIHJ1bGVzOiBbXG4gICAgICB7IHRlc3Q6IC9cXC4oanN8anN4KSQvLCB1c2U6ICdiYWJlbC1sb2FkZXInLCBleGNsdWRlOiAvbm9kZV9tb2R1bGVzLyB9LFxuICAgIF0sXG4gIH0sXG4gIHJlc29sdmU6IHtcbiAgICBleHRlbnNpb25zOiBbJy5qcycsICcuanN4J10sXG4gIH0sXG59XG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "webpack.config.babel.js"
+      ],
+      "names": [
+        "entry",
+        "output",
+        "filename",
+        "path",
+        "resolve",
+        "__dirname",
+        "publicPath",
+        "module",
+        "rules",
+        "test",
+        "use",
+        "exclude",
+        "extensions"
+      ],
+      "mappings": ";;;;;;AAAA;;;;;;kBAEe;AACbA,SAAO,CACL,cADK,CADM;AAIbC,UAAQ;AACNC,cAAU,cADJ;AAENC,UAAM,eAAKC,OAAL,CAAaC,SAAb,EAAwB,MAAxB,CAFA;AAGNC,gBAAY;AAHN,GAJK;AASbC,UAAQ;AACNC,WAAO,CACL,EAAEC,MAAM,aAAR,EAAuBC,KAAK,cAA5B,EAA4CC,SAAS,cAArD,EADK;AADD,GATK;AAcbP,WAAS;AACPQ,gBAAY,CAAC,KAAD,EAAQ,MAAR;AADL;AAdI,C",
+      "file": "webpack.config.babel.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import path from 'path';\n\nexport default {\n  entry: [\n    './src/client',\n  ],\n  output: {\n    filename: 'js/bundle.js',\n    path: path.resolve(__dirname, 'dist'),\n    publicPath: '/static/',\n  },\n  module: {\n    rules: [\n      { test: /\\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },\n    ],\n  },\n  resolve: {\n    extensions: ['.js', '.jsx'],\n  },\n}\n"
+      ]
+    },
+    "mtime": 1490890481182
+  }
+}
